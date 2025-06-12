@@ -274,6 +274,7 @@ header>.menu_block {
 .div-center-3 {
     flex-direction: column;
     flex-wrap: wrap;
+    margin-top: 100px;
 }
 
 .left-3 {
@@ -366,6 +367,10 @@ header>.menu_block {
     font-weight: bold;
     border-radius: 10px;
     animation: progress-animation 2s ease-in-out;
+}
+.skill-4{
+    text-align: center;
+    margin-top: 50px;
 }
 
 .skill .progress-bar.html {
