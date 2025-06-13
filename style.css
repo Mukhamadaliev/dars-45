@@ -116,7 +116,6 @@ ul>li:hover {
     padding: 10px 20px;
     border-radius: 15px;
     border: none;
-    /* background-color: var(--minus-whihe); */
     transition: all .5s ease;
     background-color: rgba(0, 0, 255, 0.774);
     color: var(--white);
@@ -126,7 +125,6 @@ ul>li:hover {
     background-color: blue;
     transform: scale(1.05);
     color: var(--black);
-
 }
 
 .moon:hover {
@@ -137,7 +135,7 @@ ul>li:hover {
     display: none;
 }
 
-/* ? modal */
+/* modal */
 .modal {
     padding: 1rem;
     background-color: var(--white);
@@ -146,6 +144,9 @@ ul>li:hover {
     overflow: hidden;
     display: none;
     position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 100;
 }
 
 .modal>ul>li {
@@ -159,15 +160,15 @@ ul>li:hover {
     color: var(--white);
 }
 
-
-
+.modal button {
+    margin-top: 10px;
+    width: 100%;
+}
 
 .div-max-2 {
     justify-content: space-around;
-    /* gap: 100px; */
     padding-top: 150px;
     flex-wrap: wrap;
-    /* flex-direction: column; */
 }
 
 .left-2>img {
@@ -190,10 +191,8 @@ ul>li:hover {
     text-align: center;
 }
 
-
 .Ibrohim {
     color: var(--blue);
-    /* color: var(--minus-whihe); */
 }
 
 .i-1 {
@@ -220,7 +219,6 @@ ul>li:hover {
 .btn-2:hover {
     transform: scale(1.05);
     color: var(--black);
-
 }
 
 .btn-3 {
@@ -241,7 +239,6 @@ ul>li:hover {
     padding-right: 50px;
 }
 
-
 header .none {
     display: flex;
     align-items: center;
@@ -257,7 +254,6 @@ header>.menu_block {
     cursor: pointer;
 }
 
-
 .background-3 {
     background-color: var(--minus-whihe);
 }
@@ -269,7 +265,6 @@ header>.menu_block {
 .div-max-3>h1 {
     text-align: center;
 }
-
 
 .div-center-3 {
     flex-direction: column;
@@ -288,7 +283,6 @@ header>.menu_block {
     flex-wrap: wrap;
 }
 
-
 .right-3 {
     margin-right: 480px;
     border: 1px solid var(--minus-whihe);
@@ -299,39 +293,29 @@ header>.menu_block {
     flex-wrap: wrap;
 }
 
-
 .div-center-4 {
     text-align: center;
 }
 
-
-
-
-
-
-
 /* Skills Section */
-.skills-container {
-    max-width: 1200px;
-    margin: auto;
-    text-align: center;
-    padding: 50px 20px;
-    background: linear-gradient(to right, #f3f4f6, #e5e7eb);
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.div-max-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
 }
 
-.skills-container h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #1f2937;
-    font-weight: bold;
+.skill-4 {
+    text-align: center;
+    margin-top: 50px;
 }
 
 .skill {
     margin-bottom: 30px;
     text-align: left;
     position: relative;
+    flex: 1 1 100px;
 }
 
 .skill .skill-name {
@@ -367,10 +351,6 @@ header>.menu_block {
     font-weight: bold;
     border-radius: 10px;
     animation: progress-animation 2s ease-in-out;
-}
-.skill-4{
-    text-align: center;
-    margin-top: 50px;
 }
 
 .skill .progress-bar.html {
@@ -412,13 +392,11 @@ header>.menu_block {
     from {
         width: 0%;
     }
-
     to {
         width: inherit;
     }
 }
 
-/* Add hover effects */
 .skill:hover .skill-name {
     color: #2563eb;
 }
@@ -431,7 +409,6 @@ header>.menu_block {
     background-color: var(--minus-whihe);
 }
 
-/** div-div-4-max */
 .div-div-4-max {
     gap: 50px;
     text-align: center;
@@ -441,7 +418,6 @@ header>.menu_block {
     padding-bottom: 50px;
 }
 
-/* * div-4-1 */
 .div-4-1 {
     border: 1px solid blue;
     color: black;
@@ -452,19 +428,14 @@ header>.menu_block {
 }
 
 .div-4-1:hover {
-    box-sizing: -2px 4px 23px 0px rgba(25, 140, 228, 0.2);
+    box-shadow: -2px 4px 23px 0px rgba(25, 140, 228, 0.2);
     transform: translateY(-10px);
 }
-
-
-
 
 .aykun {
     padding-left: -150px;
 }
 
-
-/** div-4-2 */
 .div-4-2 {
     border: 1px solid blue;
     border-radius: 25px;
@@ -475,11 +446,10 @@ header>.menu_block {
 }
 
 .div-4-2:hover {
-    box-sizing: -2px 4px 23px 0px rgba(25, 140, 228, 0.2);
+    box-shadow: -2px 4px 23px 0px rgba(25, 140, 228, 0.2);
     transform: translateY(-10px);
 }
 
-/** div-4-3 */
 .div-4-3 {
     color: black;
     border: 1px solid blue;
@@ -491,11 +461,10 @@ header>.menu_block {
 }
 
 .div-4-3:hover {
-    box-sizing: -2px 4px 23px 0px rgba(25, 140, 228, 0.2);
+    box-shadow: -2px 4px 23px 0px rgba(25, 140, 228, 0.2);
     transform: translateY(-10px);
 }
 
-/** .div-4-1>img,div-4-2>img,div-4-3>img  */
 .div-4-1>img,
 .div-4-2>img,
 .div-4-3>img {
@@ -505,22 +474,17 @@ header>.menu_block {
     flex-wrap: wrap;
 }
 
-
-
 .Projects {
     text-align: center;
 }
 
-.backgruond-6 {
+.background-6 {
     background-color: var(--minus-whihe);
+    padding: 20px 0;
 }
-
-
-
 
 .footer-2 {
     flex-wrap: wrap;
-
 }
 
 h5 {
@@ -556,12 +520,6 @@ textarea {
 .footer-1 {
     gap: -150px;
 }
-
-
-
-
-
-
 
 .container {
     position: relative;
@@ -679,7 +637,6 @@ form {
 .social-icons a {
     display: inline-flex;
     padding: 10px;
-
     font-size: 24px;
     color: #333;
     margin: 0 8px;
@@ -698,7 +655,6 @@ form {
     width: 300%;
     height: 100%;
     background: #2563eb;
-    /* border: 2px solid red; */
     border-radius: 150px;
     z-index: 2;
     transition: 1.8s ease-in-out;
@@ -712,7 +668,6 @@ form {
     position: absolute;
     width: 50%;
     height: 100%;
-    /* background: seagreen; */
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -800,7 +755,6 @@ form {
         gap: 20px;
     }
 
-
     header .none {
         display: none;
     }
@@ -813,8 +767,7 @@ form {
 
     header i:hover .modal {
         display: block;
-        transform: translateX(-300px);
-
+        transform: translateX(-50%);
     }
 
     .div-max-2 {
@@ -838,6 +791,7 @@ form {
 
     .div-max-skills {
         flex-direction: column;
+        flex: auto;
     }
 }
 
@@ -886,7 +840,7 @@ form {
     }
 
     .modal {
-        transform: translateX(-200px);
+        transform: translateX(-50%);
         width: 250px;
     }
 
