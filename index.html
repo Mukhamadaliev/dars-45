@@ -2,305 +2,272 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <!-- link box icons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!-- link css -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <!-- Boxicons ikonkalari uchun link -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <!-- Tashqi CSS fayliga link -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+    <!-- Qorong'u/Yorug' rejimni almashtirish -->
+    <div class="dark-mode-toggle">
+        <i class="bx bx-moon toggle-icon" id="toggleMoon"></i>
+        <i class="bx bx-sun toggle-icon" id="toggleSun"></i>
+    </div>
+
+    <!-- Navigatsiya paneli -->
     <div class="background">
         <div class="max-width-20">
             <header class="display">
                 <h1>Ibrohim.dev</h1>
                 <ul class="none display">
-                    <li class="font-size-18">Home</li>
-                    <li class="font-size-18">About Me</li>
-                    <li class="font-size-18">Skills</li>
-                    <li class="font-size-18">Projects</li>
-                    <li class="font-size-18">Contact</li>
+                    <li class="font-size-18"><a href="#Home">Home</a></li>
+                    <li class="font-size-18"><a href="#About">About Me</a></li>
+                    <li class="font-size-18"><a href="#Skills">Skills</a></li>
+                    <li class="font-size-18"><a href="#Projects">Projects</a></li>
+                    <li class="font-size-18"><a href="#Contact">Contact</a></li>
                 </ul>
                 <div class="div-btn-max display">
-                    <i class='moon bx bx-transfer-alt'></i>
-                    <i class='moon bx bx-moon'></i>
-                    <button class="none btn-1">Hire Me</button>
-                    <i class='menu_none menu_block bx bx-menu'>
-                        <div class="modal">
-                            <ul class="">
-                                <li class="display">Home</li>
-                                <li class="display">About Me</li>
-                                <li class="display">Skills</li>
-                                <li class="display">Projects</li>
-                                <li class="display">Contact</li>
-                            </ul>
-                            <button class="none btn-1">Hire Me</button>
-                        </div>
-                    </i>
+                    <button class="none btn-1" id="openHireMeModalBtn">Hire Me</button>
+
+                    <!-- Mobil menyu tugmasi -->
+                    <i class="menu_block bx bx-menu" id="mobileMenuIcon"></i>
+
+                    <!-- Mobil menyu modali -->
+                    <div class="mobile-menu-modal" id="mobileMenuModal">
+                        <ul>
+                            <li><a href="#Home">Home</a></li>
+                            <li><a href="#About">About Me</a></li>
+                            <li><a href="#Skills">Skills</a></li>
+                            <li><a href="#Projects">Projects</a></li>
+                            <li><a href="#Contact">Contact</a></li>
+                        </ul>
+                        <button class="btn-1">Hire Me</button>
+                    </div>
                 </div>
             </header>
         </div>
     </div>
 
-    <div class="background-2">
+    <!-- Meni yollash modali -->
+    <div class="modal" id="hireMeModal">
+        <div class="modal-content">
+            <span class="close" id="closeHireMeModalBtn">&times;</span>
+            <form action="">
+                <h2>Contact Me</h2>
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit" class="btn-2">Send</button>
+            </form> <br><br>
+            <!-- Aloqa tugmasi -->
+            <a href="#Contact" class="btn-2">Contact Form</a>
+        </div>
+    </div>
+
+    <!-- ? Home -->
+    <section class="background-2" id="Home">
         <div class="max-width">
             <div class="div-max-2 display">
                 <div class="left-2">
-                    <img src="assets/image.png" alt="">
+                    <img src="assets/image.png" alt="Ibrohimning fotosurati">
                 </div>
                 <div class="right-1">
-                    <h1>HI, I'm <b class="Ibrohim">Ibrohim</b></h1>
-                    <h2>Frontend developer & UI Designer </h2>
-                    <i class="i-1">Frontend programmer my level middle knowing programmer <br> html css javascript react like I know programming</i> <br>
+                    <h1>Hello, I am <b class="Ibrohim">Ibrohim</b></h1>
+                    <h2>Frontend Developer & UI Designer</h2>
+                    <p class="i-1">I am a frontend developer with intermediate knowledge of HTML, CSS, JavaScript, and React.</p>
                     <button class="btn-2">Hire Me</button>
-                    <button class="btn-3">My projects</button>
+                    <button class="btn-3">My Projects</button>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="background-3">
+    <!-- ^ About Me -->
+    <section class="background-3" id="About">
         <div class="max-width">
             <div class="div-max-3">
-                <h1>About</h1>
+                <h1>About Me</h1>
                 <div class="div-center-3">
-                    <div class="left-3 ">
-                        <h1> <i class='bx bx-desktop'></i> Website Development</h1>
-                        <p>I create websites based on your ready-made design. Whether it's a landing page or a <br>
-                            business card website, I will make it look great and work smoothly on any device.</p>
+                    <div class="left-3">
+                        <h1><i class='bx bx-desktop'></i> Veb-sayt yaratish</h1>
+                        <p>Men sizning dizayningiz asosida veb-saytlar yarataman, ular barcha qurilmalar uchun moslashuvchan
+                            va optimallashtirilgan bo'ladi.</p>
                     </div>
                     <div class="right-3">
-                        <h1> <i class='bx bxs-edit'></i> Web Design</h1>
-                        <p>I can design your website from scratch. I create modern, simple, and user- <br> friendly
-                            designs that match your brand and goals.</p>
+                        <h1><i class='bx bxs-edit'></i> Veb-dizayn</h1>
+                        <p>Toza va foydalanuvchilar uchun qulay dizaynlar, noldan yaratilgan va sizning
+                            maqsadlaringizga moslashtirilgan.</p>
                     </div>
-                    <div class="left-3 ">
-                        <h1> <i class='bx bxl-wordpress' undefined></i> WordPress Development</h1>
-                        <p>I build websites on WordPress, making them easy to update and manage. <br> It's a great
-                            choice for blogs, small businesses, or portfolios.</p>
+                    <div class="left-3">
+                        <h1><i class='bx bxl-wordpress'></i> WordPress Dasturlash</h1>
+                        <p>Bloglar, portfoliolar yoki kichik biznes uchun moslashuvchan WordPress saytlari.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="max-width">
-        <h1 class="skill-4">Skill Proficiency</h1>
-        <div class="div-max-skills">
-            <div class="skill">
-                <div class="skill-name">HTML</div>
-                <div class="progress-bar-container">
-                    <div class="progress-bar html">85%</div>
+    <!-- & skills -->
+    <section id="Skills">
+        <div class="max-width">
+            <h1 class="skill-4">Skills</h1>
+            <div class="div-max-skills">
+                <!-- Ko'nikma kartalari -->
+                <div class="skill">
+                    <div class="skill-name">HTML</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar html">85%</div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">CSS</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar css">75%</div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">JavaScript</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar javascript">70%</div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">React</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar react">65%</div>
+                    </div>
                 </div>
             </div>
-
-            <div class="skill">
-                <div class="skill-name">CSS</div>
-                <div class="progress-bar-container">
-                    <div class="progress-bar css">75%</div>
+            <div class="div-max-skills">
+                <div class="skill">
+                    <div class="skill-name">Python</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar python">60%</div>
+                    </div>
                 </div>
-            </div>
-<!--  -->
-            <div class="skill">
-                <div class="skill-name">JavaScript</div>
-                <div class="progress-bar-container">
-                    <div class="progress-bar javascript">70%</div>
+                <div class="skill">
+                    <div class="skill-name">Figma</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar figma">70%</div>
+                    </div>
                 </div>
-            </div>
-
-            <div class="skill">
-                <div class="skill-name">React</div>
-                <div class="progress-bar-container">
-                    <div class="progress-bar react">65%</div>
+                <div class="skill">
+                    <div class="skill-name">GitBash</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar gitbash">78%</div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">GitHub</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar github">73%</div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="div-max-skills">
+    </section>
 
-            <div class="skill">
-                <div class="skill-name">Payton</div>
-                <div class="progress-bar-container">
-                    <div class="progress-bar react">65%</div>
-                </div>
-            </div>
-            <div class="skill">
-                <div class="skill-name">Figma</div>
-                <div class="progress-bar-container">
-                    <div class="progress-bar figma">70%</div>
-                </div>
-            </div>
-
-            <div class="skill">
-                <div class="skill-name">GitBash</div>
-                <div class="progress-bar-container">
-                    <div class="progress-bar gitbash">78%</div>
-                </div>
-            </div>
-
-            <div class="skill">
-                <div class="skill-name">GitHub</div>
-                <div class="progress-bar-container">
-                    <div class="progress-bar github">73%</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="background-5">
+    <!-- ? Projects -->
+    <section class="background-5" id="Projects">
         <div class="max-width">
             <h1 class="Projects">Projects</h1>
             <div class="div-div-4-max display_2">
+                <!-- Har bir loyiha uchun ushbu tuzilmani takrorlang -->
                 <div class="div-4-1">
-                    <img src="assets/2025-06-10_15-19-44.png" alt="" width="250px" height="250px"><br>
-                    <br>
-                    <hr>
-                    <br>
-                    <h4 class="h4">html:5, css3, javascript</h4>
-                    <a href="https://github.com/Mukhamadaliev/dars-41.git"><i
-                            class='aykun font-size-20 bx bxl-github'></i></a>
+                    <img src="assets/2025-06-10_15-19-44.png" alt="Loyiha 1 rasmi" />
+                    <h4>HTML5, CSS3, JavaScript</h4>
+                    <a href="https://github.com/Mukhamadaliev/dars-41.git" target="_blank"><i
+                            class="bx bxl-github font-size-20"></i></a>
                     <a href="https://dars-41.vercel.app/" target="_blank"><i
-                            class='aykun font-size-20 bx bx-right-top-arrow-circle'></i></a>
+                            class="bx bx-right-top-arrow-circle font-size-20"></i></a>
                 </div>
-                <div class="div-4-2">
-                    <img src="assets/2025-06-10_20-52-01.png" alt="" width="250px" height="250px">
-                    <br>
-                    <br>
-                    <hr>
-                    <br>
-                    <h4>html:5, css3, javascript</h4>
+                <div class="div-4-1">
+                    <img src="assets/2025-06-10_20-52-01.png" alt="Loyiha 2 rasmi" />
+                    <h4>HTML5, CSS3, JavaScript</h4>
                     <a href="https://github.com/Mukhamadaliev/dars-42.git" target="_blank"><i
-                            class='font-size-20 bx bxl-github'></i></a>
+                            class="bx bxl-github font-size-20"></i></a>
                     <a href="https://dars-42-two.vercel.app/" target="_blank"><i
-                            class='font-size-20 bx bx-right-top-arrow-circle'></i></a>
+                            class="bx bx-right-top-arrow-circle font-size-20"></i></a>
                 </div>
-                <div class="div-4-3">
-                    <img src="assets/2025-06-10_20-55-44.png" alt="" width="250px" height="250px">
-                    <br>
-                    <br>
-                    <hr>
-                    <br>
-                    <h4>html:5, css3, javascript</h4>
+                <div class="div-4-1">
+                    <img src="assets/2025-06-10_20-55-44.png" alt="Loyiha 3 rasmi" />
+                    <h4>HTML5, CSS3, JavaScript</h4>
                     <a href="https://github.com/Mukhamadaliev/dars-38.git" target="_blank"><i
-                            class='font-size-20 bx bxl-github'></i></a>
+                            class="bx bxl-github font-size-20"></i></a>
                     <a href="https://dars-38.vercel.app/" target="_blank"><i
-                            class='font-size-20 bx bx-right-top-arrow-circle'></i></a>
+                            class="bx bx-right-top-arrow-circle font-size-20"></i></a>
                 </div>
             </div>
             <div class="div-div-4-max display_2">
                 <div class="div-4-1">
-                    <img src="assets/2025-06-10_21-22-12.png" alt="" width="250px" height="250px">
-                    <br>
-                    <br>
-                    <hr>
-                    <br>
-                    <h4>html:5, css3, javascript</h4>
+                    <img src="assets/2025-06-10_21-22-12.png" alt="Loyiha 4 rasmi" />
+                    <h4>HTML5, CSS3, JavaScript</h4>
                     <a href="https://github.com/Mukhamadaliev/Portfolio.git" target="_blank"><i
-                            class='font-size-20 bx bxl-github'></i></a>
+                            class="bx bxl-github font-size-20"></i></a>
                     <a href="https://portfolio-swart-pi-84.vercel.app/" target="_blank"><i
-                            class='font-size-20 bx bx-right-top-arrow-circle'></i></a>
+                            class="bx bx-right-top-arrow-circle font-size-20"></i></a>
                 </div>
-                <div class="div-4-2">
-                    <img src="assets/2025-06-10_21-43-34.png" alt="" width="250px" height="250px">
-                    <br>
-                    <br>
-                    <hr>
-                    <br>
-                    <h4>html:5, css3, javascript</h4>
+                <div class="div-4-1">
+                    <img src="assets/2025-06-10_21-43-34.png" alt="Loyiha 5 rasmi" />
+                    <h4>HTML5, CSS3, JavaScript</h4>
                     <a href="https://github.com/Mukhamadaliev/Protfolio.git" target="_blank"><i
-                            class='font-size-20 bx bxl-github'></i></a>
+                            class="bx bxl-github font-size-20"></i></a>
                     <a href="https://protfolio-1-kappa.vercel.app/" target="_blank"><i
-                            class='font-size-20 bx bx-right-top-arrow-circle'></i></a>
+                            class="bx bx-right-top-arrow-circle font-size-20"></i></a>
                 </div>
-                <div class="div-4-3">
-                    <img src="assets/2025-06-10_22-38-38.png" alt="" width="250px" height="250px">
-                    <br>
-                    <br>
-                    <hr>
-                    <br>
-                    <h4>html:5, css3, javascript</h4>
+                <div class="div-4-1">
+                    <img src="assets/2025-06-10_22-38-38.png" alt="Loyiha 6 rasmi" />
+                    <h4>HTML5, CSS3, JavaScript</h4>
                     <a href="https://github.com/Mukhamadaliev/Protfolio.git" target="_blank"> <i
-                            class='font-size-20 bx bxl-github'></i></a>
+                            class="bx bxl-github font-size-20"></i></a>
                     <a href="https://protfolio-lake-iota.vercel.app/" target="_blank"><i
-                            class='font-size-20 bx bx-right-top-arrow-circle'></i></a>
+                            class="bx bx-right-top-arrow-circle font-size-20"></i></a>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="background-6">
+    <!-- ! Contact -->
+    <section class="background-6" id="Contact">
         <div class="max-width">
-            <div class="container">
-                <div class="form-box login">
-                    <form action="#">
-                        <div class="input-box">
-                            <input type="text" placeholder="Username" required />
-                        </div>
-                        <div class="input-box">
-                            <input type="text" placeholder="Surname" required />
-                        </div>
-                        <div class="input-box">
-                            <input type="email" placeholder="Email" required />
-                        </div>
-                        <div class="input-box">
-                            <input type="number" placeholder="Number" required />
-                        </div>
-                        <div class="forgot-link">
-                        </div>
-                        <br>
-                        <button type="submit" class="btn">Login</button>
-                        <br><br>
+            <div class="form-container">
+                <div class="form-box contact-form">
+                    <form id="contactForm">
+                        <h1>My Contact Form</h1>
+                        <div class="input-box"><input type="text" placeholder="Name" required></div>
+                        <div class="input-box"><input type="email" placeholder="Email" required></div>
+                        <div class="input-box"><textarea placeholder="Your Message" required></textarea></div>
+                        <button type="submit" class="btn">Send Message</button>
                         <div class="social-icons">
                             <a href="https://instagram.com/ibrohim_325" target="_blank"><i
-                                    class='bx bxl-instagram'></i></a>
-                            <a href="https://t.me/Mukhamadaliyev20"><i class='bx bxl-telegram'></i></a>
+                                    class="bx bxl-instagram"></i></a>
+                            <a href="https://t.me/Mukhamadaliyev20" target="_blank"><i class="bx bxl-telegram"></i></a>
                             <a href="https://www.github.com/Mukhamadaliev" target="_blank"><i
-                                    class='font-size-20 bx bxl-github'></i></a>
-                            <a href="https://linkedin.com/Mukhamadaliyev20"><i class="bx bxl-linkedin"></i></a>
+                                    class="bx bxl-github"></i></a>
+                            <a href="https://linkedin.com/in/Mukhamadaliyev20" target="_blank"><i
+                                    class="bx bxl-linkedin"></i></a>
                         </div>
                     </form>
-                </div>
-                <div class="form-box register">
-                    <form action="#">
-                        <h1>Registration</h1>
-                        <div class="input-box">
-                            <input type="text" placeholder="Username" required />
-                            <i class="bx bxs-user"></i>
-                        </div>
-                        <div class="input-box">
-                            <input type="email" placeholder="Email" required />
-                            <i class="bx bxs-envelope"></i>
-                        </div>
-                        <button type="submit" class="btn">Register</button>
-                        <p>or register with social platforms</p>
-                        <div class="social-icons">
-                            <a href="#"><i class="bx bxl-google"></i></a>
-                            <a href="#"><i class="bx bxl-facebook"></i></a>
-                            <a href="#"><i class="bx bxl-github"></i></a>
-                            <a href="#"><i class="bx bxl-linkedin"></i></a>
-                        </div>
-                    </form>
-                </div>
-                <div class="toggle-box">
-                    <div class="toggle-panel toggle-left">
-                        <h1>Hello, Welcome!</h1>
-                        <p>Don't have an account?</p>
-                        <button class="btn register-btn">Contact</button>
-                    </div>
-                    <div class="toggle-panel toggle-right">
-                        <h1>Welcome Back!</h1>
-                        <p>Already have an account?</p>
-                        <button class="btn login-btn">Login</button>
-                    </div>
                 </div>
             </div>
-            <br>
-            <hr>
-            <br>
-            <h5>2025-All rights reserved, web design and - Mukhamadaliyev Ibrohim</h5>
-            <br>
+            <hr />
+            <h5>&copy; 2025 Barcha huquqlar himoyalangan. Mukhamadaliyev Ibrohim tomonidan ishlab chiqilgan va yaratilgan.
+            </h5>
         </div>
-    </div>
+    </section>
+
+    <!-- Tashqi JavaScript fayliga link -->
+    <script src="script.js"></script>
 </body>
+
 </html>
