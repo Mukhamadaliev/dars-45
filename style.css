@@ -143,6 +143,7 @@ body {
 .dark-mode-toggle .bx-moon {
     display: inline-block;
 }
+
 .dark-mode-toggle .bx-sun {
     display: none;
 }
@@ -151,6 +152,7 @@ body {
 body.dark-mode .dark-mode-toggle .bx-moon {
     display: none;
 }
+
 body.dark-mode .dark-mode-toggle .bx-sun {
     display: inline-block;
 }
@@ -448,17 +450,17 @@ li a:hover {
 
 .progress-bar.css {
     background: linear-gradient(90deg, #3b82f6, #2563eb);
-    width: 75%;
+    width: 80%;
 }
 
 .progress-bar.javascript {
     background: linear-gradient(90deg, #facc15, #f59e0b);
-    width: 70%;
+    width: 73%;
 }
 
 .progress-bar.react {
     background: linear-gradient(90deg, #38bdf8, #0ea5e9);
-    width: 65%;
+    width: 75%;
 }
 
 .progress-bar.python {
@@ -692,11 +694,14 @@ h5 {
     padding: 20px;
     min-width: 200px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    display: none; /* Dastlab yashirilgan */
+    display: none;
+    /* Dastlab yashirilgan */
 }
 
 .mobile-menu-modal.active {
-    display: block; /* JavaScript orqali ko'rsatiladi */
+    display: block;
+    /* JavaScript orqali ko'rsatiladi */
+    transform: translateY(50px);
 }
 
 .mobile-menu-modal ul {
@@ -718,10 +723,12 @@ h5 {
     margin-top: 15px;
     width: 100%;
 }
+
 form {
     display: flex;
     flex-direction: column;
 }
+
 input,
 textarea {
     margin-bottom: 15px;
@@ -729,7 +736,7 @@ textarea {
     border-radius: 5px;
     border: 1px solid #ccc;
     font-size: 16px;
-}   
+}
 
 /* Responsiv dizayn */
 @media (max-width: 1200px) {
@@ -821,6 +828,14 @@ textarea {
         font-size: 1.5rem;
     }
 
+    .none {
+        display: none;
+    }
+
+    .menu_block {
+        display: block;
+    }
+
     .left-2 img {
         width: 220px;
         height: 220px;
@@ -854,14 +869,27 @@ textarea {
 
 @media (max-width: 400px) {
     header {
-        padding: 20px 10px; /* Header padding for very small screens */
+        padding: 20px 10px;
+        /* Header padding for very small screens */
     }
+
     header h1 {
-        font-size: 1.2rem; /* Smaller font for header title */
+        font-size: 1.2rem;
+        /* Smaller font for header title */
     }
+
+    .none {
+        display: none;
+    }
+
     .right-1 h1 {
         font-size: 1.5rem;
     }
+
+    .menu_block {
+        display: block;
+    }
+
 
     .right-1 h2 {
         font-size: 1rem;
@@ -892,10 +920,12 @@ textarea {
     }
 
     .dark-mode-toggle {
-        right: 100px; /* Adjust position for smaller screens */
+        right: 100px;
+        /* Adjust position for smaller screens */
     }
 
     .modal-content {
-        margin: 5% auto; /* Adjust modal margin for smaller screens */
+        margin: 5% auto;
+        /* Adjust modal margin for smaller screens */
     }
 }
